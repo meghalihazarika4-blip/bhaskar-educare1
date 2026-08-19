@@ -1,47 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bhaskar Educare</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
-header{background:linear-gradient(135deg,#123d91,#2563eb);color:#fff;padding:16px 20px;position:sticky;top:0;z-index:5}
-.nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}.logo{font-size:25px;font-weight:800}.logo span{color:#ffd54a}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
-.hero{padding:55px 20px;background:linear-gradient(135deg,#eaf2ff,#fff)}.wrap{max-width:1100px;margin:auto}
-.hero h1{font-size:clamp(36px,7vw,58px);margin:8px 0}.hero p{max-width:700px;color:#53627a;font-size:17px}
-.btn{display:inline-block;background:#2563eb;color:#fff;border:0;border-radius:9px;padding:12px 18px;font-weight:700;text-decoration:none;cursor:pointer}
-.section{padding:38px 20px}.section h2{text-align:center}.muted{text-align:center;color:#68768b}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card{background:#fff;border:1px solid #e3e8f1;border-radius:14px;padding:18px;box-shadow:0 4px 16px #132b6310}.class-card{text-align:center;cursor:pointer;font-weight:700}.class-card:hover{background:#2563eb;color:#fff}
-#subjects,#chapters,#materials{display:none}.back{margin-bottom:18px;color:#2563eb;font-weight:700;cursor:pointer}
-.subject-grid,.chapter-grid,.material-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.material{border-left:5px solid #2563eb}.material button{margin-top:10px}
-footer{background:#0c1d43;color:#fff;text-align:center;padding:22px}
-@media(max-width:750px){.grid{grid-template-columns:repeat(2,1fr)}.subject-grid,.chapter-grid,.material-grid{grid-template-columns:1fr}nav{display:none}}
-</style>
-</head>
-<body>
-<header><div class="nav"><div class="logo">Bhaskar <span>Educare</span></div><nav><a href="#classes">Classes</a><a href="#about">About</a></nav></div></header>
-<section class="hero"><div class="wrap"><div style="font-weight:700;color:#2563eb">📚 Smart Learning Platform</div><h1>Learn Better. Dream Bigger.</h1><p>Study materials for Class 2 to Class 10. Choose your class, subject and chapter to find notes, question answers, MCQs and PDF resources.</p><a class="btn" href="#classes">Start Learning</a></div></section>
-<section class="section" id="classes"><div class="wrap"><h2>Select Your Class</h2><p class="muted">Choose a class to explore subjects and study materials.</p><div class="grid" id="classGrid"></div></div></section>
-<section class="section" id="subjects"><div class="wrap"><div class="back" onclick="showClasses()">← Back to Classes</div><h2 id="subjectTitle"></h2><div class="subject-grid" id="subjectGrid"></div></div></section>
-<section class="section" id="chapters"><div class="wrap"><div class="back" onclick="showSubjects()">← Back to Subjects</div><h2 id="chapterTitle"></h2><div class="chapter-grid" id="chapterGrid"></div></div></section>
-<section class="section" id="materials"><div class="wrap"><div class="back" onclick="showChapters()">← Back to Chapters</div><h2 id="materialTitle"></h2><div class="material-grid" id="materialGrid"></div></div></section>
-<section class="section" id="about"><div class="wrap"><h2>Bhaskar Educare</h2><p class="muted">A simple learning platform that can grow with your study library.</p></div></section>
-<footer>© 2026 Bhaskar Educare • Learn • Practice • Succeed</footer>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bhaskar Educare</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#f4f7fc;color:#172033}header{background:#1746a2;color:white;padding:15px 18px}.nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}.logo{font-size:24px;font-weight:800}.logo span{color:#ffd43b}.btn{border:0;border-radius:9px;padding:11px 16px;background:#2563eb;color:white;font-weight:700;cursor:pointer}.admin{background:#f59e0b;color:#172033}.hero{padding:45px 20px;background:#eaf2ff}.wrap{max-width:1100px;margin:auto}.hero h1{font-size:48px}.section{padding:35px 20px}.grid,.items{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.classes{grid-template-columns:repeat(5,1fr)}.card{background:white;border:1px solid #e0e6ef;border-radius:14px;padding:18px}.class{text-align:center;font-weight:bold;cursor:pointer}.class:hover{background:#2563eb;color:white}.hidden{display:none}.back{color:#2563eb;font-weight:bold;cursor:pointer;margin-bottom:15px}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:18px;z-index:9}.modalbox{background:white;border-radius:16px;padding:22px;width:100%;max-width:650px;max-height:90vh;overflow:auto}.modalbox input,.modalbox select,.modalbox textarea{width:100%;padding:11px;margin:6px 0 12px;border:1px solid #ccd5e2;border-radius:8px}.close{float:right;background:#ddd;color:#222}.admin-item{padding:12px;background:#fafafa;border:1px solid #ddd;border-radius:8px;margin:8px 0}footer{background:#0c1d43;color:white;text-align:center;padding:22px}@media(max-width:700px){.grid,.items,.classes{grid-template-columns:repeat(2,1fr)}}@media(max-width:450px){.grid,.items,.classes{grid-template-columns:1fr}.hero h1{font-size:38px}}
+</style></head><body>
+<header><div class="nav"><div class="logo">Bhaskar <span>Educare</span></div><button class="btn admin" onclick="openAdmin()">🔐 Admin</button></div></header>
+<section class="hero"><div class="wrap"><b>📚 Smart Learning Platform</b><h1>Learn Better. Dream Bigger.</h1><p>Class 2–10 notes, Q&A, MCQs, PDFs and videos.</p><a class="btn" href="#classes">Start Learning</a></div></section>
+<section class="section" id="classes"><div class="wrap"><h2>Select Your Class</h2><div class="grid classes" id="classGrid"></div></div></section>
+<section class="section hidden" id="subjects"><div class="wrap"><div class="back" onclick="show('classes')">← Back</div><h2 id="subjectTitle"></h2><div class="items" id="subjectGrid"></div></div></section>
+<section class="section hidden" id="chapters"><div class="wrap"><div class="back" onclick="show('subjects')">← Back</div><h2 id="chapterTitle"></h2><div class="items" id="chapterGrid"></div></div></section>
+<section class="section hidden" id="materials"><div class="wrap"><div class="back" onclick="show('chapters')">← Back</div><h2 id="materialTitle"></h2><div class="items" id="materialGrid"></div></div></section>
+<div class="modal" id="adminModal"><div class="modalbox"><button class="btn close" onclick="closeAdmin()">Close</button><h2>🔐 Admin Panel</h2><p>Add content to this browser.</p>
+<label>Class</label><select id="aClass"></select><label>Subject</label><input id="aSubject" placeholder="Mathematics"><label>Chapter</label><input id="aChapter" placeholder="Trigonometry"><label>Type</label><select id="aType"><option>Notes</option><option>Question & Answer</option><option>MCQ</option><option>PDF Link</option><option>Video Link</option></select><label>Title</label><input id="aTitle" placeholder="Title"><label>Content / URL</label><textarea id="aContent" rows="7" placeholder="Write notes or paste a URL"></textarea><button class="btn" onclick="addContent()">➕ Add Content</button><div id="adminList"></div></div></div>
+<footer>© 2026 Bhaskar Educare</footer>
 <script>
-const subjects=["Assamese","English","Mathematics","General Science","Social Science"];
-const chapters=["Chapter 1","Chapter 2","Chapter 3","Important Questions"];
-let currentClass="",currentSubject="",currentChapter="";
-function $(id){return document.getElementById(id)}
-function showOnly(id){["classes","subjects","chapters","materials"].forEach(x=>$(x).style.display="none");$(id).style.display="block";$(id).scrollIntoView({behavior:"smooth"})}
-function showClasses(){showOnly("classes")} function showSubjects(){showOnly("subjects")} function showChapters(){showOnly("chapters")}
-function buildClasses(){let g=$("classGrid");for(let i=2;i<=10;i++){let d=document.createElement("div");d.className="card class-card";d.textContent="Class "+i;d.onclick=()=>openClass(i);g.appendChild(d)}}
-function openClass(c){currentClass="Class "+c;$("subjectTitle").textContent=currentClass+" — Subjects";let g=$("subjectGrid");g.innerHTML="";subjects.forEach(s=>{let d=document.createElement("div");d.className="card";d.innerHTML="<h3>📘 "+s+"</h3><p>Notes, questions, MCQs and chapters</p>";d.onclick=()=>openSubject(s);g.appendChild(d)});showOnly("subjects")}
-function openSubject(s){currentSubject=s;$("chapterTitle").textContent=currentClass+" → "+s;let g=$("chapterGrid");g.innerHTML="";chapters.forEach(ch=>{let d=document.createElement("div");d.className="card";d.innerHTML="<h3>📖 "+ch+"</h3><p>Open study materials</p>";d.onclick=()=>openChapter(ch);g.appendChild(d)});showOnly("chapters")}
-function openChapter(ch){currentChapter=ch;$("materialTitle").textContent=currentClass+" → "+currentSubject+" → "+ch;const items=[["📖 Notes","Add your original chapter notes here."],["📝 Question & Answer","Add important questions and answers here."],["✅ MCQs","Add multiple-choice questions for practice."],["📄 PDF","Add your PDF link in the code/data later."]];let g=$("materialGrid");g.innerHTML="";items.forEach(x=>{let d=document.createElement("div");d.className="card material";d.innerHTML="<h3>"+x[0]+"</h3><p>"+x[1]+"</p><button class='btn' onclick='alert("This section is ready for your content.")'>Open</button>";g.appendChild(d)});showOnly("materials")}
-buildClasses();
-</script>
-</body>
-</html>
+const subjects=["Assamese","English","Mathematics","General Science","Social Science"],baseCh=["Chapter 1","Chapter 2","Chapter 3","Important Questions"];let data=JSON.parse(localStorage.getItem("bhaskarContent")||"[]"),cls="",sub="",chap="";const $=x=>document.getElementById(x);
+function show(id){["classes","subjects","chapters","materials"].forEach(x=>$(x).classList.add("hidden"));$(id).classList.remove("hidden");}
+function init(){for(let i=2;i<=10;i++){let d=document.createElement("div");d.className="card class";d.textContent="Class "+i;d.onclick=()=>openClass(i);$("classGrid").appendChild(d);$("aClass").innerHTML+=`<option>Class ${i}</option>`}}
+function openClass(i){cls="Class "+i;$("subjectTitle").textContent=cls+" — Subjects";$("subjectGrid").innerHTML="";subjects.forEach(s=>{let d=document.createElement("div");d.className="card";d.innerHTML=`<h3>📘 ${s}</h3><p>Open subject</p>`;d.onclick=()=>openSubject(s);$("subjectGrid").appendChild(d)});show("subjects")}
+function openSubject(s){sub=s;$("chapterTitle").textContent=cls+" → "+sub;let list=[...new Set(baseCh.concat(data.filter(x=>x.cls==cls&&x.sub==sub).map(x=>x.chap)))];$("chapterGrid").innerHTML="";list.forEach(c=>{let d=document.createElement("div");d.className="card";d.innerHTML=`<h3>📖 ${c}</h3>`;d.onclick=()=>openChapter(c);$("chapterGrid").appendChild(d)});show("chapters")}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function openChapter(c){chap=c;$("materialTitle").textContent=`${cls} → ${sub} → ${chap}`;let a=data.filter(x=>x.cls==cls&&x.sub==sub&&x.chap==chap);$("materialGrid").innerHTML=a.length?a.map(x=>`<div class="card"><h3>${esc(x.type)}: ${esc(x.title)}</h3><p>${x.type.includes("Link")?`<a class="btn" href="${esc(x.content)}" target="_blank">Open</a>`:esc(x.content).replace(/\n/g,"<br>")}</p></div>`).join(""):'<div class="card"><h3>No content yet</h3><p>Use Admin to add material.</p></div>';show("materials")}
+function openAdmin(){$("adminModal").style.display="flex";renderAdmin()}function closeAdmin(){$("adminModal").style.display="none"}
+function addContent(){let x={cls:$("aClass").value,sub:$("aSubject").value.trim(),chap:$("aChapter").value.trim(),type:$("aType").value,title:$("aTitle").value.trim(),content:$("aContent").value.trim()};if(!x.sub||!x.chap||!x.title||!x.content)return alert("Fill all fields");data.push(x);localStorage.setItem("bhaskarContent",JSON.stringify(data));alert("Added on this browser.");renderAdmin();["aSubject","aChapter","aTitle","aContent"].forEach(i=>$(i).value="")}
+function renderAdmin(){$("adminList").innerHTML="<h3>Added content</h3>"+(data.length?data.map((x,i)=>`<div class="admin-item">${esc(x.cls)} → ${esc(x.sub)} → ${esc(x.chap)}<br>${esc(x.type)}: ${esc(x.title)}<br><button class="btn" onclick="del(${i})">Delete</button></div>`).join(""):"<p>No content yet.</p>")}
+function del(i){data.splice(i,1);localStorage.setItem("bhaskarContent",JSON.stringify(data));renderAdmin()}init();
+</script></body></html>
