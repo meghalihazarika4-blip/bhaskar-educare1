@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhaskar Educare | Learn • Practice • Succeed</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f8ff;color:#18243a;line-height:1.6}
+header{background:linear-gradient(135deg,#1746a2,#2563eb);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+.nav{max-width:1150px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800}.logo span{color:#ffd54a}
+nav a{color:white;text-decoration:none;margin-left:22px;font-weight:600}
+.hero{background:linear-gradient(135deg,#eaf2ff,#fff);padding:70px 20px}
+.hero-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:#dbeafe;color:#1746a2;padding:7px 13px;border-radius:30px;font-weight:700;margin-bottom:15px}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-bottom:18px}
+.hero p{font-size:18px;color:#52627a;max-width:650px}
+.buttons{margin-top:25px}.btn{display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:700;margin-right:10px}
+.primary{background:#2563eb;color:#fff}.secondary{border:2px solid #2563eb;color:#1746a2}
+.hero-card{background:white;border-radius:24px;padding:30px;box-shadow:0 15px 40px #1746a21c}
+.hero-card .circle{width:95px;height:95px;border-radius:50%;background:#dbeafe;display:grid;place-items:center;font-size:48px;margin:auto auto 18px}
+.section{max-width:1150px;margin:auto;padding:55px 20px}
+.section h2{text-align:center;font-size:32px;margin-bottom:10px}.lead{text-align:center;color:#65738a;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 5px 20px #17255410;transition:.2s}
+.card:hover{transform:translateY(-4px)}.icon{font-size:32px;margin-bottom:10px}
+.card h3{margin-bottom:7px}.card p{color:#68768c;font-size:14px}
+.classes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.classbox{background:#fff;padding:20px;text-align:center;border-radius:14px;font-weight:700;border:1px solid #e2e8f0;cursor:pointer}
+.classbox:hover{background:#2563eb;color:white}
+.resources{background:#eef4ff}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.resource{background:white;border-radius:16px;padding:22px}.resource a{color:#2563eb;font-weight:700;text-decoration:none}
+.contact{background:#132b63;color:white;text-align:center;padding:55px 20px}
+footer{background:#0b1b3f;color:#cbd5e1;text-align:center;padding:18px}
+.search{max-width:600px;margin:25px auto;display:flex}
+.search input{flex:1;padding:14px;border:1px solid #ccd6e5;border-radius:10px 0 0 10px;font-size:16px}
+.search button{padding:14px 20px;border:0;background:#2563eb;color:white;border-radius:0 10px 10px 0;font-weight:700}
+@media(max-width:800px){
+nav a{margin-left:10px;font-size:14px}.hero-inner{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}
+.classes{grid-template-columns:repeat(3,1fr)}.resource-grid{grid-template-columns:1fr}
+}
+@media(max-width:500px){.cards{grid-template-columns:1fr}.classes{grid-template-columns:repeat(2,1fr)}nav a{display:none}.hero{padding:50px 18px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="logo">Bhaskar <span>Educare</span></div>
+<nav><a href="#home">Home</a><a href="#classes">Classes</a><a href="#resources">Resources</a><a href="#contact">Contact</a></nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-inner">
+<div>
+<span class="badge">📚 Smart Learning Platform</span>
+<h1>Learn Better.<br><span style="color:#2563eb">Dream Bigger.</span></h1>
+<p>Welcome to <b>Bhaskar Educare</b> — an easy-to-use educational platform for students from Class 2 to Class 10. Explore subjects, notes, question answers, PDFs and practice materials in one place.</p>
+<div class="buttons"><a class="btn primary" href="#classes">Explore Classes</a><a class="btn secondary" href="#resources">Study Resources</a></div>
+</div>
+<div class="hero-card">
+<div class="circle">🎓</div>
+<h2 style="text-align:center">Your Learning Journey Starts Here</h2>
+<p style="text-align:center;color:#68768c;margin-top:8px">Simple • Useful • Student Friendly</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Why Bhaskar Educare?</h2>
+<p class="lead">Everything students need for effective study and revision.</p>
+<div class="cards">
+<div class="card"><div class="icon">📖</div><h3>Easy Notes</h3><p>Simple chapter-wise notes designed for quick learning and revision.</p></div>
+<div class="card"><div class="icon">📝</div><h3>Question Answers</h3><p>Important questions and answers to strengthen exam preparation.</p></div>
+<div class="card"><div class="icon">📄</div><h3>PDF Resources</h3><p>Keep study materials organized and ready to read or download.</p></div>
+<div class="card"><div class="icon">🎯</div><h3>Exam Practice</h3><p>Practice important topics and build confidence for examinations.</p></div>
+</div>
+</section>
+
+<section class="section" id="classes">
+<h2>Choose Your Class</h2>
+<p class="lead">Select a class to find subjects and study materials.</p>
+<div class="classes">
+<div class="classbox" onclick="showMsg('Class 2')">Class 2</div><div class="classbox" onclick="showMsg('Class 3')">Class 3</div>
+<div class="classbox" onclick="showMsg('Class 4')">Class 4</div><div class="classbox" onclick="showMsg('Class 5')">Class 5</div>
+<div class="classbox" onclick="showMsg('Class 6')">Class 6</div><div class="classbox" onclick="showMsg('Class 7')">Class 7</div>
+<div class="classbox" onclick="showMsg('Class 8')">Class 8</div><div class="classbox" onclick="showMsg('Class 9')">Class 9</div>
+<div class="classbox" onclick="showMsg('Class 10')">Class 10</div><div class="classbox" onclick="showMsg('All Classes')">All Classes</div>
+</div>
+</section>
+
+<section class="resources" id="resources">
+<div class="section">
+<h2>Study Resources</h2>
+<p class="lead">Search and organize your learning materials.</p>
+<div class="search"><input id="search" placeholder="Search notes, subjects, chapters..."><button onclick="searchResource()">Search</button></div>
+<div class="resource-grid">
+<div class="resource"><h3>📘 Mathematics</h3><p>Formulas, examples, chapter notes and practice questions.</p><br><a href="#" onclick="showMsg('Mathematics resources')">Open Resources →</a></div>
+<div class="resource"><h3>🔬 Science</h3><p>Chapter explanations, important Q&A and revision materials.</p><br><a href="#" onclick="showMsg('Science resources')">Open Resources →</a></div>
+<div class="resource"><h3>🌍 Social Science</h3><p>History, Geography, Civics and Economics study materials.</p><br><a href="#" onclick="showMsg('Social Science resources')">Open Resources →</a></div>
+<div class="resource"><h3>📗 English</h3><p>Grammar, literature, writing practice and important questions.</p><br><a href="#" onclick="showMsg('English resources')">Open Resources →</a></div>
+<div class="resource"><h3>🅰️ Assamese</h3><p>Lessons, grammar, literature and exam-oriented preparation.</p><br><a href="#" onclick="showMsg('Assamese resources')">Open Resources →</a></div>
+<div class="resource"><h3>📥 PDFs & Photos</h3><p>A dedicated place for downloadable learning materials.</p><br><a href="#" onclick="showMsg('PDF library')">Open Library →</a></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Bhaskar Educare</h2>
+<p style="margin:10px auto 20px;max-width:650px">Helping students learn with simple explanations, useful resources and better exam preparation.</p>
+<a class="btn primary" href="#home">Back to Home</a>
+</section>
+<footer>© 2026 Bhaskar Educare • Learn • Practice • Succeed</footer>
+
+<script>
+function showMsg(name){alert(name+" section is ready to be connected with your actual study materials.");}
+function searchResource(){
+ const q=document.getElementById("search").value.trim();
+ if(q) alert("Searching Bhaskar Educare for: "+q);
+ else alert("Please enter a topic, subject or chapter.");
+}
+</script>
+</body>
+</html>
